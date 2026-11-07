@@ -1,0 +1,207 @@
+@import './styles/tokens.css';
+
+:root {
+  --bg: var(--v-bg);
+  --bg-sidebar: var(--v-sidebar);
+  --bg-elevated: var(--v-surface);
+  --bg-input: var(--v-surface-2);
+  --bg-hover: var(--v-hover);
+  --bg-active: var(--v-active);
+  --border: var(--v-border-strong);
+  --border-soft: var(--v-border);
+  --text: var(--v-ink);
+  --text-dim: var(--v-ink-2);
+  --text-muted: var(--v-ink-3);
+  --accent: var(--v-primary);
+  --accent-soft: var(--v-hover);
+  --accent-glow: rgba(0, 0, 0, 0.25);
+  --ok: var(--v-good);
+  --err: var(--v-danger);
+  --warn: var(--v-warning);
+  --radius: var(--v-radius-lg);
+  --radius-sm: var(--v-radius-sm);
+  --shadow: var(--v-shadow-menu);
+
+  /* Compatibility aliases for components written before the shared token set. */
+  --bg-panel: var(--bg-elevated);
+  --accent2: var(--v-ink-2);
+  --accent-strong: var(--v-primary-hover);
+  --glass-blur: 0px;
+  --lg-fill: var(--v-surface-2);
+  --lg-fill-soft: var(--v-surface);
+  --lg-fill-strong: var(--v-surface-3);
+  --lg-fill-inset: var(--v-base);
+  --lg-rim: var(--v-border-strong);
+  --lg-lens: none;
+  --lg-shadow: var(--v-raise-card);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  background: var(--v-bg);
+  color: var(--v-ink);
+  font: 14px/1.5 var(--v-font);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--v-surface-3);
+  border: 3px solid transparent;
+  border-radius: var(--v-radius-sm);
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--v-surface-4);
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::selection {
+  background: rgba(219, 222, 227, 0.18);
+}
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 28px 32px 60px;
+}
+
+.page.hidden {
+  display: none;
+}
+
+.muted {
+  color: var(--v-ink-3);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Button volume from the shared reference: a surface slightly above the canvas,
+   a light top edge and a soft shadow; no gradients or glossy highlights. */
+:root {
+  --btn-fill: var(--v-surface-2);
+  --btn-fill-hover: var(--v-surface-3);
+  --btn-bevel: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  --btn-shadow: var(--v-raise);
+  --btn-pressed: var(--v-recess);
+  --primary-fill: var(--v-primary);
+  --primary-fill-hover: var(--v-primary-hover);
+  --primary-shadow: var(--v-raise-primary);
+}
+
+.composer-pill,
+.quiet-btn,
+.filter-btn,
+.select-control,
+.browse-btn,
+.cookies-toolbar button,
+.cookies-actions button,
+.cookies-section button,
+button.quiet {
+  border: 1px solid var(--v-border-strong);
+  border-radius: var(--v-radius-pill);
+  background: var(--btn-fill);
+  box-shadow: var(--btn-shadow);
+  color: var(--v-ink);
+  min-height: 34px;
+}
+
+.composer-pill:hover,
+.quiet-btn:hover,
+.filter-btn:hover,
+.browse-btn:hover,
+.cookies-toolbar button:hover,
+.cookies-actions button:hover,
+.cookies-section button:hover,
+button.quiet:hover {
+  background: var(--btn-fill-hover);
+  color: var(--v-ink);
+}
+
+.composer-pill:active,
+.quiet-btn:active,
+.filter-btn:active,
+.browse-btn:active,
+button.quiet:active {
+  box-shadow: var(--btn-pressed);
+}
+
+.cookies-pill.has-cookies {
+  border-color: rgba(83, 158, 85, 0.35);
+  color: var(--v-good);
+}
+
+.composer-submit,
+.solid-btn {
+  border: 1px solid transparent;
+  border-radius: var(--v-radius-pill);
+  background: var(--primary-fill);
+  box-shadow: var(--primary-shadow);
+  color: var(--v-primary-ink);
+}
+
+.composer-submit:hover:not(:disabled),
+.solid-btn:hover:not(:disabled) {
+  background: var(--primary-fill-hover);
+  color: var(--v-primary-ink);
+}
+
+.filter-btn.active {
+  background: var(--v-surface-3);
+  border-color: var(--v-border-strong);
+  box-shadow: var(--v-raise);
+  color: var(--v-ink);
+}
+
+.filter-btn.active:hover {
+  background: var(--v-surface-4);
+  color: var(--v-ink);
+}
+
+.composer-submit:disabled {
+  background: var(--v-surface-4);
+  box-shadow: var(--v-raise-card);
+  color: var(--v-ink-3);
+}
+

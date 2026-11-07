@@ -1,0 +1,53 @@
+/* Shared dark palette (odin-dark-*) used across the desktop apps: canvas #15171b,
+   raised #1b1d21…#393b40, ink #dbdee3, accent #4e99a3. */
+:root {
+  color-scheme: dark;
+
+  --v-base: #101216;
+  --v-bg: #15171b;
+  --v-sidebar: #15171b;
+  --v-surface: #1b1d21;
+  --v-surface-2: #212327;
+  --v-surface-3: #27292d;
+  --v-surface-4: #2d2f33;
+  --v-ink: #dbdee3;
+  --v-ink-2: #96989d;
+  --v-ink-3: #787a7f;
+  --v-border: #232529;
+  --v-border-strong: #313337;
+  --v-hover: rgba(219, 222, 227, 0.06);
+  --v-active: rgba(219, 222, 227, 0.09);
+  --v-primary: #dbdee3;
+  --v-primary-hover: #e8eaee;
+  --v-primary-ink: #15171b;
+  --v-accent: #4e99a3;
+  --v-accent-soft: rgba(78, 153, 163, 0.14);
+  --v-good: #539e55;
+  --v-danger: #dc6973;
+  --v-danger-soft: rgba(220, 105, 115, 0.12);
+  --v-warning: #d57141;
+  --v-warning-soft: rgba(213, 113, 65, 0.12);
+  --v-info: #6f9ee8;
+  --v-overlay: rgba(16, 18, 22, 0.66);
+
+  --v-font: "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
+  --v-display: "Segoe UI Variable Display", var(--v-font);
+  --v-mono: "Cascadia Code", "JetBrains Mono", Consolas, monospace;
+
+  --v-radius-xl: 20px;
+  --v-radius-lg: 16px;
+  --v-radius-md: 12px;
+  --v-radius-sm: 8px;
+  --v-radius-pill: 999px;
+
+  --v-shadow-menu: 0 12px 32px rgba(0, 0, 0, 0.45);
+  --v-shadow-modal: 0 24px 60px rgba(0, 0, 0, 0.55);
+  /* Volume as in the reference: a light top edge and a soft bottom shadow; pressed surfaces get an inset top shadow. */
+  --v-raise: inset 0 1px 0 rgba(255, 255, 255, 0.07), 0 1px 1.5px rgba(0, 0, 0, 0.6);
+  --v-raise-card: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 1px 2px rgba(0, 0, 0, 0.45);
+  --v-recess: inset 0 1px 2px rgba(0, 0, 0, 0.45);
+  --v-raise-primary: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.55);
+
+  --v-sidebar-width: 256px;
+  --v-bar-height: 44px;
+}

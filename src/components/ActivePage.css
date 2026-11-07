@@ -1,0 +1,137 @@
+.active-page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 28px 32px 60px;
+}
+
+.active-card {
+  border: 1px solid var(--v-border);
+  border-radius: var(--v-radius-lg);
+  background: var(--v-surface);
+  box-shadow: var(--v-raise-card);
+  padding: 20px;
+}
+
+.active-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.active-header h2 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.active-count {
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--v-border-strong);
+  color: var(--text-dim);
+  font-size: 11px;
+}
+
+.active-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.active-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid var(--v-border);
+  border-radius: var(--v-radius-md);
+  background: transparent;
+  transition: background 0.15s;
+}
+
+.active-row:hover {
+  background: var(--v-hover);
+}
+
+.active-row .spin {
+  color: var(--text-dim);
+  flex: none;
+}
+
+.active-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+  flex: 1;
+}
+
+.active-info strong {
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.active-info span {
+  color: var(--text-dim);
+  font-size: 11.5px;
+}
+
+.active-track {
+  width: 120px;
+  height: 4px;
+  flex: none;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--v-surface-4);
+}
+
+.active-track-fill {
+  width: 40%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--v-primary);
+  animation: active-slide 1.4s ease-in-out infinite;
+}
+
+@keyframes active-slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(350%);
+  }
+}
+
+.active-empty {
+  padding: 36px 20px;
+  text-align: center;
+}
+
+.active-empty p {
+  margin: 0 0 5px;
+  font-size: 14px;
+}
+
+.active-empty span {
+  color: var(--text-dim);
+  font-size: 12px;
+}
+
+.spin {
+  animation: active-spin 0.9s linear infinite;
+}
+
+@keyframes active-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+

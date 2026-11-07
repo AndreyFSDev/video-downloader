@@ -1,0 +1,244 @@
+.download {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.download-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 0 8px;
+  text-align: center;
+}
+
+.hero-icon {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 6px;
+  border-radius: var(--v-radius-md);
+  object-fit: cover;
+}
+
+.download-hero h1 {
+  margin: 0;
+  font-family: var(--v-display);
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.download-hero p {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 12.5px;
+}
+
+.cookies-inline {
+  border: 1px solid var(--v-border);
+  border-radius: var(--v-radius-lg);
+  background: var(--v-surface);
+  box-shadow: var(--v-raise-card);
+  padding: 18px;
+}
+
+.cookies-inline-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-size: 12.5px;
+}
+
+.cookies-inline-input {
+  width: 100%;
+  resize: vertical;
+  border: 1px solid var(--v-border);
+  border-radius: var(--v-radius-sm);
+  outline: 0;
+  background: var(--v-base);
+  box-shadow: var(--v-recess);
+  color: var(--text);
+  padding: 10px;
+  font-family: Consolas, 'Cascadia Mono', monospace;
+  font-size: 11.5px;
+  line-height: 1.45;
+}
+
+.cookies-inline-input:focus {
+  background: var(--v-surface-2);
+  box-shadow: none;
+}
+
+.cookies-inline-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.cookies-inline-actions .muted {
+  font-size: 11px;
+}
+
+.inline-error {
+  border: 1px solid rgba(220, 105, 115, 0.28);
+  border-radius: var(--v-radius-md);
+  background: rgba(220, 105, 115, 0.06);
+  padding: 11px 13px;
+}
+
+.inline-error strong {
+  display: block;
+  margin-bottom: 3px;
+  color: #f0a0a0;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.inline-error p {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.video-result {
+  border: 1px solid var(--v-border);
+  border-radius: var(--v-radius-lg);
+  background: var(--v-surface);
+  box-shadow: var(--v-raise-card);
+  padding: 18px;
+}
+
+.video-summary {
+  display: flex;
+  gap: 14px;
+  min-width: 0;
+}
+
+.video-thumb {
+  width: 180px;
+  height: 102px;
+  flex: none;
+  object-fit: cover;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--v-radius-sm);
+  background: var(--v-surface);
+}
+
+.video-copy {
+  min-width: 0;
+}
+
+.video-copy h2 {
+  margin: 1px 0 5px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.video-copy p {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 11.5px;
+}
+
+.video-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-soft);
+}
+
+.select-control {
+  flex: 1;
+  min-width: 0;
+  height: 34px;
+  padding: 0 10px;
+  border: 1px solid var(--v-border);
+  border-radius: var(--v-radius-sm);
+  outline: 0;
+  background: var(--v-base);
+  box-shadow: var(--v-recess);
+  color: var(--text);
+  font-size: 12px;
+}
+
+.select-control:focus {
+  background: var(--v-surface-2);
+  box-shadow: none;
+}
+
+.progress-block {
+  margin-top: 12px;
+}
+
+.progress-track {
+  height: 5px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--v-border-strong);
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--v-primary-hover);
+  transition: width 0.25s ease;
+}
+
+.progress-meta {
+  display: flex;
+  gap: 14px;
+  margin-top: 6px;
+  color: var(--text-dim);
+  font-size: 10.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.batch-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--v-radius-sm);
+  background: var(--bg-elevated);
+  color: var(--text-dim);
+  font-size: 11.5px;
+}
+
+.batch-status span {
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.small {
+  font-size: 11.5px;
+}
+
+@media (max-width: 760px) {
+  .download-hero h1 {
+    font-size: 21px;
+  }
+
+  .video-summary {
+    flex-direction: column;
+  }
+
+  .video-thumb {
+    width: 100%;
+    height: 160px;
+  }
+}
+
+

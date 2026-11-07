@@ -1,0 +1,18 @@
+Viloader
+Copyright 2026 Andrey Shkenev (AndreyFSDev)
+
+Author:     https://github.com/AndreyFSDev
+Repository: https://github.com/AndreyFSDev/Viloader
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Under Section 4(d) of the License, any redistribution of this work or of a
+derivative work must retain this NOTICE file, including the author attribution
+above, in the form described there.
+
+Third-party components downloaded by the program at first run (not bundled):
+- yt-dlp (https://github.com/yt-dlp/yt-dlp), The Unlicense.
+- FFmpeg essentials build by Gyan Doshi (https://github.com/GyanD/codexffmpeg),
+  GNU GPL v3. FFmpeg is fetched from its own release and is not part of this work.
+
+

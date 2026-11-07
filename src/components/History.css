@@ -1,0 +1,250 @@
+.history {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 28px 32px 60px;
+}
+
+.history-card {
+  border: 1px solid var(--v-border);
+  border-radius: var(--v-radius-lg);
+  background: var(--v-surface);
+  box-shadow: var(--v-raise-card);
+  padding: 20px;
+}
+
+.history-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.history-header h2 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.history-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-input {
+  width: 190px;
+  height: 32px;
+  padding: 0 10px;
+  border: 1px solid var(--v-border);
+  border-radius: var(--v-radius-sm);
+  outline: 0;
+  background: var(--v-base);
+  box-shadow: var(--v-recess);
+  color: var(--text);
+  font-size: 12px;
+}
+
+.search-input:focus {
+  background: var(--v-surface-2);
+  box-shadow: none;
+}
+
+.history-actions button {
+  height: 32px;
+  padding: 0 12px;
+  border: 1px solid var(--v-border-strong);
+  border-radius: var(--v-radius-pill);
+  background: var(--v-surface-2);
+  box-shadow: var(--v-raise);
+  color: var(--text-dim);
+  font-size: 11.5px;
+}
+
+.history-actions button:hover:not(:disabled) {
+  background: var(--bg-hover);
+  color: var(--text);
+}
+
+.history-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.filter-btn {
+  height: 30px;
+  padding: 0 11px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-dim);
+  font-size: 11.5px;
+}
+
+.filter-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text);
+}
+
+.filter-btn.active {
+  background: var(--v-ink);
+  border-color: var(--v-ink);
+  color: var(--v-bg);
+}
+
+.history-empty {
+  padding: 48px 20px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.history-empty p {
+  margin: 8px 0;
+  font-size: 13px;
+}
+
+.history-hint {
+  font-size: 11.5px;
+  opacity: 0.8;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.history-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 11px 10px;
+  border: 1px solid transparent;
+  border-radius: var(--v-radius-sm);
+}
+
+.history-item:hover {
+  background: var(--v-hover);
+}
+
+.history-item.status-failed {
+  border-color: rgba(220, 105, 115, 0.18);
+}
+
+.history-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.history-item-title {
+  margin-bottom: 4px;
+  color: var(--text);
+  font-size: 12.5px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.history-item-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-dim);
+  font-size: 11px;
+}
+
+.history-item-site,
+.history-item-format,
+.history-item-time {
+  white-space: nowrap;
+}
+
+.history-item-time {
+  color: var(--text-muted);
+}
+
+.history-item-error {
+  margin-top: 6px;
+  color: var(--err);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.history-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: none;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 10.5px;
+  font-weight: 500;
+}
+
+.badge.ok {
+  background: rgba(83, 158, 85, 0.1);
+  color: var(--ok);
+}
+
+.badge.err {
+  background: rgba(220, 105, 115, 0.1);
+  color: var(--err);
+}
+
+.badge.warn {
+  background: rgba(213, 113, 65, 0.1);
+  color: var(--warn);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.icon-btn {
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1;
+}
+
+.icon-btn:hover {
+  border-color: rgba(220, 105, 115, 0.3);
+  background: rgba(220, 105, 115, 0.08);
+  color: var(--err);
+}
+
+@media (max-width: 760px) {
+  .history {
+    padding: 20px 16px 40px;
+  }
+
+  .history-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .search-input {
+    width: 150px;
+  }
+}
+
